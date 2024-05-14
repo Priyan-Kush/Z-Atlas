@@ -7,13 +7,13 @@ const GetResponse = async(req,res) => {
         const destination = req.body.destination;
         //console.log(req.body);
         let src,dest,route;
-         await axios.get(`https://api.opencagedata.com/geocode/v1/json?q=${source}&key=8ebdf43c012c45819e4d6ab0ec50e840&language=en&pretty=1`)
+         await axios.get(`https://api.opencagedata.com/geocode/v1/json?q=${source}&key=dd5aca3fa0b749c1a62a35db921195fe&language=en&pretty=1`)
          .then((res)=>{
              //console.log(res.data.results[0].geometry);
              src = [res.data.results[0].geometry.lat, res.data.results[0].geometry.lng];
          })
 
-         await axios.get(`https://api.opencagedata.com/geocode/v1/json?q=${destination}&key=8ebdf43c012c45819e4d6ab0ec50e840&language=en&pretty=1`)
+         await axios.get(`https://api.opencagedata.com/geocode/v1/json?q=${destination}&key=dd5aca3fa0b749c1a62a35db921195fe&language=en&pretty=1`)
          .then((res)=>{
              //console.log(res.data.results[0].geometry);
              dest = [res.data.results[0].geometry.lat, res.data.results[0].geometry.lng];
